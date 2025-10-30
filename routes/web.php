@@ -10,15 +10,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/mahasiswa', function () {
+Route::get('/produk', function () {
     $npm = [123,124,125,126];
     $nama = ['Rai','Ray','Ria','Riska'];
     $jumlah = count ($npm);
-    return view('mahasiswa' ,compact('npm','jumlah','nama'));
-});
-
-Route::get('/profile', function () {
-    $nama = 'Riska';
-    //return view('profile' , compact ('nama'));
-    return view('profile')->with('nama', $nama);
+    return view('produk' ,compact('npm','jumlah','nama'));
 });
